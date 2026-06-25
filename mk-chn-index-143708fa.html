@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 · 从内容到场景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f5f2;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+            padding: 3rem 2.5rem;
+            margin: 2rem auto;
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 2.2rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+            color: #0b0b0b;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #5f5f5f;
+            margin-bottom: 2.2rem;
+            font-weight: 400;
+            border-left: 3px solid #dad3cb;
+            padding-left: 1rem;
+        }
+
+        .opening {
+            font-size: 1.125rem;
+            font-weight: 380;
+            color: #2b2b2b;
+            margin-bottom: 1.6rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #ece8e2;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.4rem;
+        }
+
+        .intro-text a {
+            color: #1a3f5c;
+            text-decoration: underline;
+            text-decoration-thickness: from-font;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        .intro-text a:hover {
+            color: #7f5f4c;
+            text-decoration-color: #b89e89;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem 2rem;
+            margin: 2.4rem 0 2rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .feature-item {
+            border-top: 1px solid #e5dfd8;
+            padding-top: 1rem;
+        }
+
+        .feature-item .ft-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a49486;
+            font-weight: 450;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item .ft-desc {
+            font-size: 1rem;
+            color: #242424;
+            line-height: 1.5;
+        }
+
+        .closing-note {
+            background: #f3f0ec;
+            border-radius: 20px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 1.2rem 0;
+            font-size: 0.98rem;
+            color: #2f2f2f;
+            border-left: 4px solid #c2b4a6;
+        }
+
+        .closing-note strong {
+            font-weight: 550;
+            color: #131313;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            border-top: 1px solid #e4ddd6;
+            padding-top: 1.6rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 460;
+            cursor: pointer;
+            color: #454545;
+            padding: 0.4rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-mini summary::before {
+            content: "▸";
+            margin-right: 0.6rem;
+            color: #b19b89;
+            transition: transform 0.2s;
+        }
+
+        .faq-mini details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-mini p {
+            margin: 0.6rem 0 0.8rem 1.6rem;
+            color: #3c3c3c;
+            font-size: 0.96rem;
+        }
+
+        .footer-meta {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #949494;
+            text-align: center;
+            border-top: 1px solid #efebe7;
+            padding-top: 1.6rem;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 2rem 1.5rem;
+                margin: 1rem auto;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .closing-note {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .subhead {
+                font-size: 0.95rem;
+                padding-left: 0.8rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page {
+                padding: 1.6rem 1.2rem;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>找到那个叫 mk 的体育站点</h1>
+        <div class="subhead">不绕弯子，先说说它是什么</div>
+
+        <div class="intro-text">
+            <p class="opening">
+                你大概搜过不少体育信息站，眼花缭乱的界面、弹不完的广告，最后连赛程都找不到。所以当看到「mk体育」这几个字的时候，第一反应可能是——又一个体育内容聚合？
+            </p>
+            <p>
+                其实它比你想的要安静一些。打开 <a href="https://mk-chn-sports.com">mk体育</a>，页面简洁，信息层级清楚，没有那种「必须注册才能看赛程」的紧张感。它更像一个为你准备好的资料夹：比分、队伍动态、联赛时间表，按顺序摆好，你直接取用就行。对大部分只想快速了解某场比赛、某个球员近况的人来说，这种不打扰的使用体验反而难得。
+            </p>
+            <p>
+                当然，光说「直接」还不够。下面几个特点，可能正好是你需要的：
+            </p>
+        </div>
+
+        <ul class="feature-grid">
+            <li class="feature-item">
+                <span class="ft-label">赛程</span>
+                <span class="ft-desc">过去、当下、即将开始的比赛，按日期和联赛分组，一目了然。</span>
+            </li>
+            <li class="feature-item">
+                <span class="ft-label">队伍</span>
+                <span class="ft-desc">不同项目的球队页面，胜率、阵容、近期战绩，没有冗余信息。</span>
+            </li>
+            <li class="feature-item">
+                <span class="ft-label">文章</span>
+                <span class="ft-desc">简短的赛前分析、赛后速报，不堆砌数据，只说重点。</span>
+            </li>
+            <li class="feature-item">
+                <span class="ft-label">搜索</span>
+                <span class="ft-desc">输入球队、球员或赛事名称，直接定位到相关内容，不用翻好几页。</span>
+            </li>
+        </ul>
+
+        <div class="closing-note">
+            <strong>一个温和的建议：</strong> 如果你只是想知道明天凌晨的比赛几点开球，或者想查某个队伍最近五场的表现，<a href="https://mk-chn-sports.com">mk体育</a> 会是一个不浪费你时间的选项。它没有喧哗的推送，只有整理好的事实。
+        </div>
+
+        <div class="faq-mini">
+            <details>
+                <summary>这个网站适合什么人？</summary>
+                <p>偏向普通体育观众、偶尔查赛程的爱好者、以及不想被复杂界面干扰的人。它不针对硬核数据分析师，但日常看球完全够用。</p>
+            </details>
+            <details>
+                <summary>内容更新频率如何？</summary>
+                <p>比赛结束后会较快更新比分和简讯，联赛赛程表则提前整理好。具体更新节奏可以到站内留意页面标注的时间。</p>
+            </details>
+        </div>
+
+        <div class="footer-meta">
+            mk体育 · 从内容到场景 · 2025
+        </div>
+    </div>
+</body>
+</html>
